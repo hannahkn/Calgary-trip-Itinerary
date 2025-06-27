@@ -1,0 +1,174 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom, #fffafc, white);
+  color: #333;
+  position: relative;
+  overflow-x: hidden;
+  line-height: 100%;
+}
+
+header, footer {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background-image: url('https://i.pinimg.com/736x/d5/ab/ba/d5abbab937e38d4b1ffe36aa26fdd647.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 4px 10px rgba(255, 192, 203, 0.4);
+   position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* slight dark overlay */
+  z-index: 0;
+}
+
+h1 {
+  font-size: 2.0em;
+  color: white;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+header p {
+  font-size: 1.0em;
+    color: white;
+  font-family: 'Quicksand', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  font-family: 'Quicksand', serif;
+  font-size: 0.8em;
+  color: #b03060;
+  background: #fff0f8;
+  margin-top: 40px;
+  box-shadow: 0 2px 6px rgba(255, 192, 203, 0.3);
+}
+
+/* Box */
+.box {
+  background: #fff;
+  border: 2px dashed #ffc0cb;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Hotel Link */
+.hotel a {
+  display: inline-block;
+  background-color: #fff8fb;
+  color: #b5406f;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(255, 182, 193, 0.5);
+}
+
+.hotel a:hover {
+  background-color: #ffcce0;
+  color: #a6005a;
+  transform: scale(1.03);
+}
+
+.hotel a::before {
+  content: "🗺️ ";
+}
+
+/* Packing Section */
+.backpacks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.backpacks div {
+  background: #fffafc;
+  border: 1px solid #ffd6e8;
+  padding: 10px 15px;
+  border-radius: 12px;
+}
+
+h3 {
+  color: #c71585;
+  margin-bottom: 10px;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  accent-color: #ff69b4;
+}
+
+/* Background Hearts */
+body::before {
+  content: " 🐎 👒 💛";
+  font-size: 3rem;
+  position: fixed;
+  top: 10%;
+  left: -30px;
+  animation: floatHearts 15s infinite linear;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(110vw) translateY(100vh);
+  }
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  header p, footer {
+    font-size: 1em;
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  .hotel a {
+    font-size: 0.95em;
+    padding: 8px 14px;
+  }
+
+  .backpacks {
+    flex-direction: column;
+  }
+}
